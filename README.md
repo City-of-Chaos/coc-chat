@@ -1,14 +1,12 @@
-# HyperzFiveM-Chat
-This is just the basic FiveM Chat system, except it is made transparent! Please get rid of that ugly blue background!
+# COC-CHAT
 
 ---
 
-Documentation is [here](https://docs.hyperz.dev/hyperzfivem-chat)
-- https://docs.hyperz.dev/hyperzfivem-chat
+![image](https://github.com/City-of-Chaos/coc-chat/assets/122732007/9ce851ef-8c20-474e-980c-dff7f291aa42)
 
 ---
 
 ### Credits:
 - Programming by [cfx.re team](https://fivem.net)
-- Main CSS Changes by [Hyperz](https://hyperz.dev/github)
-- Included in [Hyperz Base](https://github.com/itz-hyperz/hyperzfivem-base)
+- MADE BACKGROUND CLEAR [Hyperz](https://hyperz.dev/github)
+- ZAPS6000 FORKED AND MADE CURRENT CHANGES

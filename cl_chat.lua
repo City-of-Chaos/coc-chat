@@ -1,6 +1,5 @@
 local chatInputActive = false
 local chatInputActivating = false
-local chatHidden = true
 local chatLoaded = false
 
 RegisterNetEvent('chatMessage')
@@ -24,7 +23,6 @@ AddEventHandler('chatMessage', function(author, color, text)
     table.insert(args, 1, author)
   end
 
-  if (not chatVisibilityToggle) then
     SendNUIMessage({
       type = 'ON_MESSAGE',
       message = {
@@ -33,7 +31,7 @@ AddEventHandler('chatMessage', function(author, color, text)
         args = args
       }
     })
-  end
+  
 end)
 
 AddEventHandler('__cfx_internal:serverPrint', function(msg)
@@ -218,7 +216,7 @@ Citizen.CreateThread(function()
   SetNuiFocus(false)
 
   while true do
-    Wait(0)
+    Wait(75)
 
     if not chatInputActive then
       if IsControlPressed(0, 245) --[[ INPUT_MP_TEXT_CHAT_ALL ]] then
@@ -246,8 +244,6 @@ Citizen.CreateThread(function()
         shouldBeHidden = true
       end
 
-      if (shouldBeHidden and not chatHidden) or (not shouldBeHidden and chatHidden) then
-        chatHidden = shouldBeHidden
 
         SendNUIMessage({
           type = 'ON_SCREEN_STATE_CHANGE',
@@ -255,5 +251,5 @@ Citizen.CreateThread(function()
         })
       end
     end
-  end
+  
 end)
